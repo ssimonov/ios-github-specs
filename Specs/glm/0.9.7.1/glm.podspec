@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.license          = {:type => 'MIT', :file => 'copying.txt' }
   s.authors          = { "Christophe Riccio" => "glm@g-truc.net"}
 
+  s.source = { :git => 'https://github.com/maxcampolo/glm.git', :tag => s.version.to_s }
   s.header_dir       = "glm"
   s.header_mappings_dir = "glm"
   s.preserve_paths = 'glm/**/*{.h,.hpp,.inl}'
@@ -17,10 +18,6 @@ Pod::Spec.new do |s|
   s.source_files     = 'glm/**/*{.h,.hpp}'
 
   s.libraries = 'c++'
-
-  s.source = { 
-      :git => 'https://github.com/maxcampolo/glm.git'
-  }
 
   s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/glm' }
 
